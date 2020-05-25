@@ -1,6 +1,6 @@
 # Puppet print
 
-Use the chrome rendering engine in puppet to print a html page into a pdf.
+Use the chromium rendering engine to print a html page into a pdf.
 
 The purpose of the PDF microservice is to generate PDF documents from HTML. The max size for a html file is hard coded at 10mb. No database connection is used to generate the PDF. The file should be sent to the service with all files embedded into the html. One file goes in and one file comes out. 
 
@@ -26,6 +26,6 @@ For information on curl look at the man pages or examine the curl command in the
 
 There are two basic routes in the microservice. 
 
-`localhost:3000/health` is a keep-alive `GET` endpoint for OpenShift. If this stops responding OpenShift will restart the pod.
+`localhost:3000/health` is a keep-alive `GET` endpoint for health checks. If this stops responding restart the container.
 
 `localhost:3000/pdf` is a `POST` endpoint that gets a `text/html` file (with inline embedded content) and it returns a pdf.
