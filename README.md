@@ -1,5 +1,7 @@
 # Puppet print
 
+Use the chrome rendering engine in puppet to print a html page into a pdf.
+
 The purpose of the PDF microservice is to generate PDF documents from HTML.  No database connection is used to generate the PDF. The file should be sent to the service with all files embedded into the html. One file goes in and one file comes out. 
 
 ## Development
