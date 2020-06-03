@@ -8,6 +8,7 @@
     "clean": "rm -rf dist && rm -rf node_modules",
     "debug": "./node_modules/nodemon/bin/nodemon.js -e ts  --exec \"npm run compile\"",
     "docker-debug": "docker-compose up",
+    "docker-clean": "docker ps -aqf status=exited | xargs docker rm && docker images -qf dangling=true | xargs docker rmi",
     "start": "node dist/server.js",
     "tsc": "tsc"
   },
